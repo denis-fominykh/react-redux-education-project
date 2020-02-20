@@ -1,11 +1,12 @@
 import React from 'react';
+import './App.scss';
 
 import { Posts } from './components/Posts';
 
 export function App() {
   return (
-    <React.Fragment>
+    <div className='App'>
       <Posts />
-    </React.Fragment>
+    </div>
   );
 }

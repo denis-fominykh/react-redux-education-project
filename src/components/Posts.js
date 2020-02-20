@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchPosts } from '../actions/postActions';
 
-export class Posts extends Component {
+class Posts extends Component {
+  UNSAFE_componentWillMount() {
+    this.props.fetchPosts();
+  }
+
   render() {
-    const postItem = this.state.posts.map(post => {
+    const postItem = this.props.posts.map(post => {
       return (
         <div key={post.id}>
           <h1>{post.title}</h1>
@@ -19,3 +25,9 @@ export class Posts extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  posts: state.posts.items,
+});
+
+export default connect(mapStateToProps, { fetchPosts })(Posts);

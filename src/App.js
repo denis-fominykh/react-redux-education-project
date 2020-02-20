@@ -1,17 +1,15 @@
 import React from 'react';
-import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import './App.scss';
 
+import { store } from './store';
 import { Posts } from './components/Posts';
 import { Postform } from './components/Postform';
-
-const store = createStore(() => [], {}, applyMiddleware());
 
 export function App() {
   return (
     <Provider store={store}>
-      <div className='App'>
+      <div className="App">
         <Postform />
         <hr />
         <Posts />

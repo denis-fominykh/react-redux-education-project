@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { Posts } from './components/Posts';
+
 export function App() {
   return (
     <React.Fragment>
-      <h1>Hello, Redux!</h1>
+      <Posts />
     </React.Fragment>
   );
 }

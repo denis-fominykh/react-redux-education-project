@@ -13,6 +13,12 @@ export default function(state = initialState, action) {
         items: action.payload,
       };
     }
+    case NEW_POST: {
+      return {
+        ...state,
+        item: action.payload,
+      };
+    }
     default:
       return state;
   }

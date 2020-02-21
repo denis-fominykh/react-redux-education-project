@@ -4,7 +4,7 @@ import './App.scss';
 
 import { store } from './store';
 import Posts from './components/Posts';
-import { Postform } from './components/Postform';
+import Postform from './components/Postform';
 
 export function App() {
   return (
